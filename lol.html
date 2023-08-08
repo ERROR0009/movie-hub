@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="header.css">
+  <head>
+    <title>LOL</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="Logo" id="home">
+        <img src="img/logo2.jpg" alt="logo">
+      </div>
+      <div class="ceanter">
+        <input type="text" id="searchInput" placeholder="SEARCH">
+        <div class="se" id="searchButton">
+          <img src="img/search_FILL0_wght400_GRAD0_opsz48.png">
+        </div>
+      </div>
+      <div class="right">
+        <div class="message">
+          <a class="trend"> TRENDING</a>
+          <a class="how">HOW TO DOWNLOAD ??</a>
+        </div>
+        <div class="mode">
+          <img src="img/dark_mode_FILL0_wght400_GRAD0_opsz48.png" alt="mode">
+        </div> 
+      </div>
+    </div>
+    <div>
+      
+    </div>
+
+    <script>
+      // Get the logo and search button elements
+      const logo = document.getElementById("home");
+      const searchButton = document.getElementById("searchButton");
+
+      // Add a click event listener to the logo
+      logo.addEventListener("click", function() {
+        // Redirect to the home page
+        window.location.href = "lol.html";
+      });
+
+      // Add a click event listener to the search button
+      searchButton.addEventListener("click", function() {
+        // Get the search input element
+        const searchInput = document.getElementById("searchInput");
+        // Get the value of the search input
+        const searchText = searchInput.value;
+        // Redirect to the search results page with the search text
+        window.location.href = "search_results.html?query=" + encodeURIComponent(searchText);
+      });
+    </script>
+  </body>
+</html>
