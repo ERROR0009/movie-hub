@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HEHEHE</title>
+    <title>Website Button Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,45 +17,53 @@
             height: 100vh;
         }
 
+        .button-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
         button {
             padding: 10px 20px;
             font-size: 16px;
             margin: 8px;
-            cursor: pointer;
-            height: 60px;
+            cursor: pointer;height: 60px;
             width: auto;
             color: white;
             background-color: black;
             border: none;
             border-radius: 8px;
             font-size: 25px;
-            
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <button id="open_website_button">get me link....</button>
-        <button id="new_button" style="display: none;">LINK THE ONE AND ONLY LIKE</button>
+        <div class="button-div">
+            <a id="open_website_button" href="https://youtube.com/shorts/Ygq_LzH2umk?feature=share" target="_blank">
+                <button>get me link....</button>
+            </a>
+        </div>
+        
+        <div class="button-div">
+            <a id="new_button" href="https://www.anotherexample.com" target="_blank" style="display: none;">
+                <button>LINK THE ONE AND ONLY LIKE</button>
+            </a>
+        </div>
     </div>
 
     <script>
-        const openWebsiteButton = document.getElementById('open_website_button');
         const newButton = document.getElementById('new_button');
         let clickCount = 0;
 
-        openWebsiteButton.addEventListener('click', () => {
+        // Listen for clicks on the open website button
+        document.getElementById('open_website_button').addEventListener('click', () => {
             clickCount++;
             if (clickCount === 2) {
                 newButton.style.display = 'block';
             }
-            openWebsite();
         });
-
-        function openWebsite() {
-            const url = 'https://youtube.com/shorts/Ygq_LzH2umk?feature=share'; // Replace with your website URL
-            window.open(url);
-        }
     </script>
 </body>
 </html>
