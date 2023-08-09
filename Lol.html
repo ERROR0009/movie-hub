@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HEHEHE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 8px;
+            cursor: pointer;
+            height: 60px;
+            width: auto;
+            color: white;
+            background-color: black;
+            border: none;
+            border-radius: 8px;
+            font-size: 25px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="open_website_button">get me link....</button>
+        <button id="new_button" style="display: none;">LINK THE ONE AND ONLY LIKE</button>
+    </div>
+
+    <script>
+        const openWebsiteButton = document.getElementById('open_website_button');
+        const newButton = document.getElementById('new_button');
+        let clickCount = 0;
+
+        openWebsiteButton.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 2) {
+                newButton.style.display = 'block';
+            }
+            openWebsite();
+        });
+
+        function openWebsite() {
+            const url = 'https://youtube.com/shorts/Ygq_LzH2umk?feature=share'; // Replace with your website URL
+            window.open(url);
+        }
+    </script>
+</body>
+</html>
